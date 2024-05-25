@@ -4,14 +4,14 @@ const UniversidadSchema = Schema({
 
     nombre:{
         type:String,
-        require: true
+        required: true
     },
     direccion:{
         type:String
     },
     telefono:{
         type:String,
-        require: true
+        required: true
     },
     fechaCreacion: {
         type: Date,

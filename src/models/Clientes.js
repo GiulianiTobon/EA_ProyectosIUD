@@ -4,11 +4,13 @@ const {Schema,model} = require('mongoose');
 const clienteSchema = Schema({
 
     nombre:{
-        type:String
+        type:String,
+        required : true
     },
 
     email:{
-        type:String
+        type:String,
+        required: true
     },
 
     fechaCreacion: {

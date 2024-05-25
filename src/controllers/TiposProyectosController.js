@@ -21,10 +21,14 @@ const postTiposProyectos = async function(req, res){
         }
 
         const body = req.body; 
-        const tipoProyecto = new TipoProyecto(body)
-
-        tipoProyecto.save();
-        await res.status(201).json(tipoProyecto)
+        const tipoProyectoExiste = await TipoProyecto.findOne({nombre: body.nombre})
+        if(tipoProyectoExiste){
+            res.send(tipoProyectoExiste + "ya existe, intente con otro tipo de proyecto diferente")
+        }else{
+            const tipoProyecto = new TipoProyecto(body)
+            tipoProyecto.save();
+            await res.status(201).json(tipoProyecto)
+        }      
     }catch(e){
         return res.status(500).json({
             message: e

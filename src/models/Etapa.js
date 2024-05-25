@@ -5,7 +5,8 @@ const EtapasSchema = Schema({
 
     nombre:{
         type:String,
-        require: true,
+        required: true,
+        unique: true,
         enum:['Anteproyecto','Entrega Parcial 1', 'Entrega Parcial 2','Entrega Final']
     },
     fechaCreacion: {

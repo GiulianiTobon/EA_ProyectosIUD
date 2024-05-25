@@ -15,12 +15,12 @@ const ProyectoSchema = Schema({
 
     fechaIniciacion: {
         type: Date,
-        require: true
+        required: true
     },
 
     fechaEntrega: {
         type: Date,
-        require: true
+        required: true
     },
 
     valor: {
@@ -41,7 +41,7 @@ const ProyectoSchema = Schema({
     cliente: {
         type: Schema.Types.ObjectId,
         ref: 'Cliente',
-        require: true,
+        required: true,
     },
 
     nombreCliente: {
@@ -51,7 +51,7 @@ const ProyectoSchema = Schema({
     tipoProyecto: {
         type: Schema.Types.ObjectId,
         ref: 'Tipo Proyecto',
-        require: true,
+        required: true,
     },
 
     nombreTipo:{ 
@@ -61,7 +61,7 @@ const ProyectoSchema = Schema({
     universidad: {
         type: Schema.Types.ObjectId,
         ref: 'Universidad',
-        require: true,
+        required: true,
     },
 
     nombreUniversidad:{
@@ -71,7 +71,7 @@ const ProyectoSchema = Schema({
     etapa: {
         type: Schema.Types.ObjectId,
         ref: 'Etapa',
-        require: true,
+        required: true,
     },
 
     nombreEtapa:{
